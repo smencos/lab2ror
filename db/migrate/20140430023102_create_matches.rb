@@ -7,8 +7,8 @@ class CreateMatches < ActiveRecord::Migration
       t.integer :local_id
       t.integer :visitante_id
       t.string :marcador
-      t.string :ganador
-      t.string :perdedor
+      t.integer :ganador_id
+      t.integer :perdedor_id
       t.string :empate
       t.integer :group_id
       t.integer :estadio_id

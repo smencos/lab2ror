@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140403020600) do
+ActiveRecord::Schema.define(version: 20140430024523) do
 
   create_table "estadios", force: true do |t|
     t.string   "nombre"
@@ -48,11 +48,25 @@ ActiveRecord::Schema.define(version: 20140403020600) do
     t.integer  "local_id"
     t.integer  "visitante_id"
     t.string   "marcador"
-    t.string   "ganador"
-    t.string   "perdedor"
+    t.integer  "ganador_id"
+    t.integer  "perdedor_id"
     t.string   "empate"
     t.integer  "group_id"
     t.integer  "estadio_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "participations", force: true do |t|
+    t.integer  "team_id"
+    t.integer  "group_id"
+    t.integer  "punto"
+    t.integer  "pj"
+    t.integer  "pg"
+    t.integer  "pp"
+    t.integer  "pe"
+    t.integer  "gf"
+    t.integer  "gc"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
